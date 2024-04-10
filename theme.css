@@ -1,14 +1,11 @@
 body {
-	--accent-h: 79;
-	--accent-s: 25%;
-	--accent-l: 67%;
 	input[type=checkbox]:checked {
 	  background-color: hsl(65deg, 31%, 85%);
 	  border-color: var(--checkbox-color);
 	}
-  }
+}
   
-  .theme-light {
+.theme-light {
 	--color-base-00: #fcfbf1;
 	--color-base-05: #f5f3e0;
 	--color-base-10: #f5f3e0;
@@ -21,9 +18,28 @@ body {
 	--color-base-60: #373832;
 	--color-base-70: #2e2c29;
 	--color-base-100: #161511;
-  }
   
-  .theme-dark {
+	--accent-h: 79;
+	--accent-s: 25%;
+	--accent-l: 67%;
+	--color-accent-hsl: var(--accent-h),
+			  var(--accent-s),
+			  var(--accent-l);
+  
+	--color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+	--color-accent-1: hsl(calc(var(--accent-h) - 3), calc(var(--accent-s) * 1.02), calc(var(--accent-l) * 0.85));
+	--color-accent-2: hsl(calc(var(--accent-h) - 5), calc(var(--accent-s) * 1.05), calc(var(--accent-l) * 1.29));
+	--text-on-accent: var(--color-base-100);
+	--text-on-accent-inverted: var(--color-base-10);
+	--interactive-accent: var(--color-accent);
+	--interactive-accent-hover: var(--color-accent-1);
+}
+  
+button.mod-warning:hover {
+	filter: brightness(85%)
+}
+  
+.theme-dark {
 	--color-base-00: #161511;
 	--color-base-05: #302a1d;
 	--color-base-10: #3f3d2f;
@@ -36,5 +52,19 @@ body {
 	--color-base-60: #a89366;
 	--color-base-70: #fcfbf1;
 	--color-base-100: #fcfbf1;
-  }
   
+	--accent-h: 79;
+	--accent-s: 25%;
+	--accent-l: 40%;
+	--color-accent-hsl: var(--accent-h),
+			var(--accent-s),
+			var(--accent-l);
+
+	--color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+	--color-accent-1: hsl(calc(var(--accent-h) - 3), calc(var(--accent-s) * 1.02), calc(var(--accent-l) * 0.85));
+	--color-accent-2: hsl(calc(var(--accent-h) - 5), calc(var(--accent-s) * 1.05), calc(var(--accent-l) * 1.29));
+	--text-on-accent: var(--color-base-100);
+	--text-on-accent-inverted: var(--color-base-10);
+	--interactive-accent: var(--color-accent);
+	--interactive-accent-hover: var(--color-accent-1);
+}
